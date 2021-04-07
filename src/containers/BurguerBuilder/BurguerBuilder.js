@@ -10,7 +10,7 @@ import { connect } from 'react-redux';
 import * as actions from '../../store/actions/index';
 import axios from '../../axios-orders'
 
-const BurguerBuilder = props => {
+export const BurguerBuilder = props => {
     const [purchasing, setPurchasing] = useState(false);
 
     useEffect(() => {
@@ -116,4 +116,4 @@ const mapDispatchToProps = dispatch => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(BurguerBuilder, axios)); 
+export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(BurguerBuilder, axios));
